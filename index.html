@@ -2,16 +2,17 @@
 <html>
 <body>
 
-<p id="user"></p>
-
+<p id="user1"></p>
+<p id="user3"></p>
+<p id="user2"></p>
 <script>
 var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
 
 var obj = JSON.parse(s);
 
-document.getElementById("user").innerHTML =
-"Name: " + obj.first_name + " " + obj.last_name + "<br>" +
-"Location: " + obj.location;
+document.getElementById("user1").innerHTML = obj.first_name;
+document.getElementById("user2").innerHTML = obj.last_name;
+document.getElementById("user3").innerHTML = obj.Ocean;
 </script>
 
 </body>
