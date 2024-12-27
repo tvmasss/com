@@ -2,9 +2,10 @@
 <html>
 <body>
 
-<p id="user1"></p>
-<p id="user3"></p>
-<p id="user2"></p>
+<p id="marlboroSilverPrice"></p>
+<p id="marlboroSilverQuantaty"></p>
+<p id="marlboroSilverDescription"></p>
+<p id="marlboroSilverQuantaty14"></p>
 <script>
 
 function getFileSity(fileName){
@@ -15,12 +16,14 @@ function getFileSity(fileName){
 }
 let productData = getFileSity('./add.json');
 
-document.getElementById("user1").innerHTML = productData.marlboroSilverPrice;
-document.getElementById("user2").innerHTML = productData.marlboroSilverQuantaty;
-document.getElementById("user3").innerHTML = productData.marlboroSilverDescription;
+document.getElementById("marlboroSilverPrice").innerHTML = productData.marlboroSilverPrice;
+document.getElementById("marlboroSilverQuantaty").innerHTML = productData.marlboroSilverQuantaty;
+document.getElementById("marlboroSilverDescription").innerHTML = productData.marlboroSilverDescription;
+document.getElementById("marlboroSilverQuantaty14").innerHTML = productData.marlboroSilverQuantaty14;
+
 </script>
 
-
+marlboroSilverQuantaty14
   
 </body>
 </html>
