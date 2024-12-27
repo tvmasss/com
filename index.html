@@ -10,13 +10,8 @@
 fetch('https://tvmasss.github.io/com/add.json')
   .then(response => response.json())
   .then(jsonData => console.log(jsonData));
-    
-var s = jsonData;
 
-
-
-    
-var obj = JSON.parse(s);
+var obj = JSON.parse(jsonData);
 
 document.getElementById("user1").innerHTML = obj.success;
 document.getElementById("user2").innerHTML = obj.last_name;
