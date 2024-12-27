@@ -8,14 +8,34 @@
 
 
 <script>
-let productData = getFileSity('./add.json');
+
+const wAjax=(_url)=>{
+    return new Promise((resolve)=>{
+        $.ajax({
+            url: _url,
+            type: 'GET',
+            async: true, // Асинхронно!
+        }).done((r)=>{
+            if(!r)r = false;
+            resolve(r);
+        }).catch((e)=>{
+            console.log(e.status, e.responseText, e);
+            resolve(false);
+        });
+    });
+};
+
+// Три запуска на выбор (из клика можно запускать func() и убрать async)
+
+
+const func=async()=>{
+    let x = await wAjax('./add.json');
+    console.log(x);
+};
+// func(); // start
+
+
     
-function getFileSity(fileName){
-    let  request = new XMLHttpRequest();
-    request.open('GET', fileName, false);
-    request.send(null);
-    return  JSON.parse(request.responseText);
-}
 
 
 document.getElementById("sazaaax").innerHTML = productData.sazaaax;
