@@ -19,7 +19,7 @@ var s = response;
 
 var obj = JSON.parse(s);
 
-document.getElementById("user1").innerHTML = response.success;
+document.getElementById("user1").innerHTML = obj.success;
 document.getElementById("user2").innerHTML = obj.last_name;
 document.getElementById("user3").innerHTML = obj.location;
 </script>
