@@ -7,7 +7,7 @@
 <p id="user2"></p>
 <script>
 
-fetch('https://reqbin.com/echo/get/json', {
+fetch('./add.json', {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
@@ -15,9 +15,7 @@ fetch('https://reqbin.com/echo/get/json', {
 })
    .then(response => response.json());
   
-var s = response;
-
-var obj = JSON.parse(s);
+var response = JSON.parse(s);
 
 document.getElementById("user1").innerHTML = obj.success;
 document.getElementById("user2").innerHTML = obj.last_name;
