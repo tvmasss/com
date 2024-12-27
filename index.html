@@ -7,7 +7,11 @@
 <p id="user2"></p>
 <script>
 
-var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
+fetch('./add.json')
+  .then(response => response.json())
+  .then(jsonData => console.log(jsonData));
+    
+var s = jsonData;
 
 
 
