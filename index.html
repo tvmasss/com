@@ -13,7 +13,7 @@ function getFileSity(fileName){
     request.send(null);
     return  JSON.parse(request.responseText);
 }
-let sityData = getFileSity('https://script.google.com/macros/s/AKfycbzgjeRGD8jV044_yORJ-OcKX0hx2zujleR4LI-Gm880Gkz743mcLjnFq7ivgku4M-bwAg/exec');
+let sityData = getFileSity('./add.json');
 
 document.getElementById("user1").innerHTML = sityData.id07;
 document.getElementById("user2").innerHTML = sityData.id08;
