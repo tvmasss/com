@@ -7,15 +7,12 @@
 <p id="user2"></p>
 <script>
 
-fetch('./add.json', {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json',
-    },
-})
-   .then(response => response.json());
-  
-var response = JSON.parse(s);
+var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
+
+
+
+    
+var obj = JSON.parse(s);
 
 document.getElementById("user1").innerHTML = obj.success;
 document.getElementById("user2").innerHTML = obj.last_name;
