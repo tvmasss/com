@@ -8,14 +8,15 @@
 
 
 <script>
-
+let productData = getFileSity('./add.json');
+    
 function getFileSity(fileName){
     let  request = new XMLHttpRequest();
     request.open('GET', fileName, false);
     request.send(null);
     return  JSON.parse(request.responseText);
 }
-let productData = getFileSity('./add.json');
+
 
 document.getElementById("sazaaax").innerHTML = productData.sazaaax;
 document.getElementById("1017499").innerHTML = productData.1017499;
