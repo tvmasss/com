@@ -13,11 +13,11 @@ function getFileSity(fileName){
     request.send(null);
     return  JSON.parse(request.responseText);
 }
-let sityData = getFileSity('./add.json');
+let productData = getFileSity('./add.json');
 
-document.getElementById("user1").innerHTML = sityData.id07;
-document.getElementById("user2").innerHTML = sityData.id08;
-document.getElementById("user3").innerHTML = sityData.id09;
+document.getElementById("user1").innerHTML = productData.id07;
+document.getElementById("user2").innerHTML = productData.id08;
+document.getElementById("user3").innerHTML = productData.id09;
 </script>
 
 
