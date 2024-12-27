@@ -6,11 +6,20 @@
 <p id="user3"></p>
 <p id="user2"></p>
 <script>
-var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
+
+fetch('https://reqbin.com/echo/get/json', {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+    },
+})
+   .then(response => response.json());
+  
+var s = response;
 
 var obj = JSON.parse(s);
 
-document.getElementById("user1").innerHTML = obj.first_name;
+document.getElementById("user1").innerHTML = response.success;
 document.getElementById("user2").innerHTML = obj.last_name;
 document.getElementById("user3").innerHTML = obj.location;
 </script>
