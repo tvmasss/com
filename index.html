@@ -1,44 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title> Names of India </title>
-  	<link rel="stylesheet" href="index.css">
-</head>
 <body>
-	<div id="hero">
-		<h1>Pronounciations of Indian Names</h1>
-		<h3>Learn how to correctly say Indian names</h3>
-	</div>	
-	<div id="display">
-		<div id="loader"> 
-			<h4> Loading</h4> 
-		</div>
-		<div id="allNames">
-		</div>
 
-	</div>
+<p id="user"></p>
 
-	<script>
+<script>
+var s = '{"first_name" : "Sammy", "last_name" : "Shark", "location" : "Ocean"}';
 
-const json = `[
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz"
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv"
-  }
-]`;
+var obj = JSON.parse(s);
 
-const users = JSON.parse(json);
-let allNames = users[1].name;
-		
-		
-	</script>
+document.getElementById("user").innerHTML =
+"Name: " + obj.first_name + " " + obj.last_name + "<br>" +
+"Location: " + obj.location;
+</script>
+
 </body>
 </html>
