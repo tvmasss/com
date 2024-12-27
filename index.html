@@ -7,16 +7,22 @@
 <p id="user2"></p>
 <script>
 
-fetch('https://tvmasss.github.io/com/add.json')
-  .then(response => response.json())
-  .then(jsonData => console.log(jsonData));
+function getFileSity(fileName){
+    let  request = new XMLHttpRequest();
+    request.open('GET', fileName, false);
+    request.send(null);
+    return  JSON.parse(request.responseText);
+}
+let sityData = getFileSity('https://tvmasss.github.io/com/add.json');
 
-var obj = JSON.parse(jsonData);
-
-document.getElementById("user1").innerHTML = obj.success;
-document.getElementById("user2").innerHTML = obj.last_name;
-document.getElementById("user3").innerHTML = obj.location;
+document.getElementById("user1").innerHTML = sityData.success;
+document.getElementById("user2").innerHTML = sityData.last_name;
+document.getElementById("user3").innerHTML = sityData.location;
 </script>
 
+
+
+
+  
 </body>
 </html>
