@@ -34,7 +34,7 @@
 			errorMessageElm.style.display = "block"
 		}
 			
-		fetch("https://api.apispreadsheets.com/data/7765/").then(res=>{
+		fetch("./add.json").then(res=>{
 			if (res.status === 200){
 				res.json().then(data=>{
 					const yourData = data["data"]
