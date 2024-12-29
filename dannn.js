@@ -6,5 +6,5 @@ var s = '{
 "id1022029": "Домкрат гидравлический бутылочный Autovirazh 20 т"
 
 }';
-
-var obj = JSON.parse(s);
+var d = JSON.stringify(s)
+var obj = JSON.parse(d);
