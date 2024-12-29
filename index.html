@@ -19,6 +19,59 @@ document.getElementById("id141921").innerHTML = obj.id141921;
 document.getElementById("id163098").innerHTML = obj.id163098;
 </script>
 
+
+
+<div class="vk-preloader">
+  <style type="text/css" scoped>
+    .vk-preloader {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #bbb;
+      text-align: center;
+      font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .vk-preloader.hidden {
+      opacity: 0;
+      transition: opacity 2s;
+    }
+
+    .vk-preloader.none {
+      display: none;
+    }
+
+  </style>
+
+  Hello World
+</div>
+<script>
+  const TIME_TO_WAIT = 4;
+  const preloader = document.querySelector('.vk-preloader');
+  const removePreloader = function() {
+    preloader.classList.add("none");
+    preloader.removeEventListener('transitionend', removePreloader);
+  };
+  const hidePreloader = function() {
+    preloader.classList.add("hidden");
+    preloader.addEventListener('transitionend', removePreloader);
+  };
+if (preloader) {
+    window.addEventListener('load', (event) => {
+      hidePreloader()
+    });
+  }
+
+</script>
+
+
+
+  
   
 </body>
 </html>
